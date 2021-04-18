@@ -31,7 +31,8 @@ if(cmodule::includeModule('sale')){
 /*
 В принципе , для получение ID заказа и записи в его свойства УТМ меток можно в файле init.php добавить обработчик событий OnSaleOrderBeforeSaved
 */
-
+$propCode = "UTM_SOURCE_ORDER";
+setcookie($propCode, $_GET["utm_source"], time() + 60*60*24*60);
 \Bitrix\Main\EventManager::getInstance()->addEventHandler(
     'sale',
     'OnSaleOrderBeforeSaved',

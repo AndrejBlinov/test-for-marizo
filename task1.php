@@ -53,7 +53,7 @@ function SetUtmSource(\Bitrix\Main\Event $event)
             $propertyCollection = $order->getPropertyCollection();
 			$somePropValue = $propertyCollection->getItemByOrderPropertyCode($propCode);
 			// Изменение поля:
-			$somePropValue->setValue(_COOKIE[$propCode]);
+			$somePropValue->setValue($_COOKIE[$propCode]);
 		}
 	}
 }

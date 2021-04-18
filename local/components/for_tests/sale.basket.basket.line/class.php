@@ -514,8 +514,7 @@ class SaleBasketLineComponent extends CBitrixComponent
 				$imgNewPhoto = $arItem["ARTNUMBER"] ;
 			}
 			$arItem["PICTURE_SRC"] = "/upload/photo/".$imgNewPhoto.".png";
-			//конец задания
-			
+			//конец задания	
 		}
 	}
 
